@@ -1,0 +1,43 @@
+{
+    "drivers":{
+        "max":{
+            "name": "Max Verstappen",
+            "num": 1,
+            "team": "Red Bull Racing",
+            "image": "maxver01.avif",
+            "country": "Netherlands",
+            "dob": "30/09/1997",
+            "points": 303,
+            "podiums": 108,
+            "gp": 201,
+            "wdc": 3,
+            "bio": "He’s Max by name, and max by nature. <br><br> Arriving as Formula 1’s youngest ever competitor at just 17 years old, Verstappen pushed his car, his rivals and the sport’s record books to the limit. The baby-faced Dutchman with the heart of a lion took the Toro Rosso – and then the Red Bull – by the horns with his instinctive racing style. <br><br> The son of former F1 driver Jos Verstappen and super-quick karting Mum Sophie Kumpen, racing runs through his genes. Despite moving out of Dad’s house to live in Monaco, Verstappen remains close to his family, and though he’s not afraid to speak his mind, he can still be surprisingly shy. <br><br> Having become the Netherlands' first world champion aged just 24, the expectations for the new generation’s leading light are sky high – but with Verstappen there’s a feeling that the sky’s the limit."
+        },
+        "lando":{
+            "name": "Lando Norris",
+            "num": 4,
+            "team": "McLaren",
+            "image": "lannor01.avif",
+            "country": "United Kingdom",
+            "dob": "13/11/1999",
+            "points": 241,
+            "podiums": 23,
+            "gp": 120,
+            "wdc": 0,
+            "bio": "Lando Norris may not be named after Star Wars rebel Lando Calrissian - his Mum just liked the moniker - but he has flair and fighting spirit in bountiful supply. <br><br> McLaren had the British teenager on their books for two years before fast-tracking him into F1’s galaxy of stars in 2019. A firecracker in his junior career, with a penchant for pole positions and wheel-to-wheel tussles, Norris didn’t let them down. <br><br> Away from the track, Norris brims with a modest charm and an artistic side sees him design and paint his own race gear as a hobby. The focus for the future is allying artistry and ambition on track as McLaren rely on the promise of youth to take them back to the top." 
+        },
+        "lec":{
+            "name": "Charles Leclerc",
+            "num": 16,
+            "team": "Ferrari",
+            "image": "chalec01.avif",
+            "country": "Monaco",
+            "dob": "16/10/1997",
+            "points": 217,
+            "podiums": 38,
+            "gp": 141,
+            "wdc": 0,
+            "bio": "Born in the Mediterranean idyll of Monaco, Leclerc arrived in F1 on a tidal wave of expectation. <br><br> Practically peerless on his way to the GP3 and Formula 2 crowns, he showcased a dazzling array of skills from scorching pole positions, commanding victories – even when his car caught fire twice at Silverstone – to an ability to muscle his way through the pack. Winning back-to-back championships also taught Leclerc how to handle pressure, another useful tool in the big pond of Formula 1 racing. <br><br> There he immediately put the cat among the proverbial pigeons, unafraid to go wheel-to-wheel with established number one, Sebastian Vettel. A maiden F1 victory at Spa was followed by another a week later on Ferrari’s hallowed home turf of Monza. The tifosi had found another new hero – who then became the first man to out-score Vettel over a season with the Scuderia, a feat he repeated in crushing fashion the following year. <br><br> Out of the car, Leclerc is modest and thoughtful - but then he is on his own very personal mission. This exciting young talent is racing for his late father Herve and his friend and mentor Jules Bianchi, the F1 driver who died in 2015."
+        }
+    }
+}

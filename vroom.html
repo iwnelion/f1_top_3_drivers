@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="vroom.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <title>rich kids with vroom vrooms</title>
+</head>
+<body>
+    <h1>F1 Drivers 2024</h1>
+    
+    <div id="get-info">
+        <form>
+            <label for="drivers">Choose a driver:</label>
+            <select name="drivers" id="drivers">
+                <option value="max">Max Verstappen</option>
+                <option value="lando">Lando Norris</option>
+                <option value="lec">Charles Leclerc</option>
+            </select>
+        </form>
+    </div>
+    <div id="basic">
+        <h2 id="display-info"></h2>
+        <h3 id="points-info"></h3>
+        <p id="team-info"></p>
+        <p id="country-info"></p>
+        <p id="dob-info"></p>
+        <p id="podiums-info"></p>
+        <p id="gp-info"></p>
+        <p id="wdc-info"></p>
+    </div>
+    <div id="bio"></div>
+    <script>
+        const drivers=document.getElementById('drivers');
+        const displayInfo=document.getElementById('display-info');
+        const pointsInfo=document.getElementById('points-info');
+        const teamInfo=document.getElementById('team-info');
+        const countryInfo=document.getElementById('country-info');
+        const dobInfo=document.getElementById('dob-info');
+        const podiumsInfo=document.getElementById('podiums-info');
+        const gpInfo=document.getElementById('gp-info');
+        const wdcInfo=document.getElementById('wdc-info');
+        const bio=document.getElementById('bio');
+
+        fetch('drivers.json')
+            .then(response=>response.json())
+            .then(data=>{
+                const driverInfo=data.drivers;
+
+                drivers.addEventListener('change', ()=>{
+                    const selectedDriver=drivers.value.toLowerCase();
+                    const info=driverInfo[selectedDriver];
+                    if(info){
+                        displayInfo.innerHTML=`<b>${info.name}</b> <i>${info.num}</i><br>`;
+                        pointsInfo.innerHTML=`Points: ${info.points}`;
+                        teamInfo.innerHTML=`<b>Team: </b> ${info.team}`;
+                        countryInfo.innerHTML=`<b>Country: </b> ${info.country}`;
+                        dobInfo.innerHTML=`<b>Date of birth: </b> ${info.dob}`;
+                        podiumsInfo.innerHTML=`<b>Podiums: </b> ${info.podiums}`;
+                        gpInfo.innerHTML=`<b>Grands Prix entered: </b> ${info.gp}`;
+                        wdcInfo.innerHTML=`<b>World Championships: </b> ${info.wdc}`;
+                        bio.innerHTML=`<h3>Biography </h3> <br> ${info.bio}`;
+
+                        displayInfo.style.fontSize='48px';
+                        pointsInfo.style.fontSize='24px';
+                        pointsInfo.style.fontStyle='italic';
+
+                        if(info.name.toLowerCase()=='max verstappen'){
+                            displayInfo.style.borderLeft='10px solid rgb(35, 50, 106)';
+                            displayInfo.style.paddingLeft='10px';
+                        }
+                        else if(info.name.toLowerCase()=='lando norris'){
+                            displayInfo.style.borderLeft='10px solid #FF8000';
+                            displayInfo.style.paddingLeft='10px';
+                        }
+                        else if(info.name.toLowerCase()=='charles leclerc'){
+                            displayInfo.style.borderLeft='10px solid #EF1A2D';
+                            displayInfo.style.paddingLeft='10px';
+                        }
+                        else{
+                            displayInfo.style.borderLeft='none';
+                            displayInfo.style.paddingLeft='0px';
+                        }
+                        const driverImage=document.createElement('img');
+                        driverImage.src=info.image;
+                        displayInfo.appendChild(driverImage);
+                        driverImage.style.width="200px";
+                    }
+                    else{
+                        displayInfo.innerHTML='driver not found';
+                    }
+                });
+            });
+    //using switch::
+        // drivers.addEventListener('change', ()=>{
+        //     const selectedDriver=drivers.value.toLowerCase();
+        //     switch(selectedDriver){
+        //         case 'max':
+        //             displayInfo.innerHTML='<h2>Max Verstappen</h2>';
+        //             break;
+        //         case 'lando':
+        //             displayInfo.innerHTML='<h2>Lando Norris</h2>';
+        //             break;
+        //         case 'lec':
+        //             displayInfo.innerHTML='<h2>Charles Leclerc</h2>';
+        //             break;
+        //         default:
+        //             displayInfo.innerHTML='<h2>no driver selected</h2>';
+        //     }
+        // })
+    </script>
+</body>
+</html>

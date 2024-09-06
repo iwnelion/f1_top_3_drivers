@@ -1,0 +1,36 @@
+body{
+    background-color:rgb(241, 241, 241);
+    font-family: Inter, "arial black";
+}
+h1{
+    font-style: italic;
+    font-size: 30px;
+    padding: 20px;
+    margin: 15px -10px;
+    color: rgb(241, 241, 241);
+    background-color: rgb(255, 23, 23);
+}
+label{
+    font-style: italic;
+    font-size: 23px;
+}
+select{
+    font-family: Inter, "arial black";
+    font-size: 23px;
+    margin-left: 3px;
+    padding: 3px;
+}
+#basic{
+    display: inline-block;
+    vertical-align: top;
+}
+#bio{
+    width: 60%;
+    padding: 1%;
+    padding-bottom: none;
+    float: right;
+    /* margin: 0 5%; */
+    /* vertical-align: top; */
+    font-size: 30px;
+    text-align: justify;
+}
