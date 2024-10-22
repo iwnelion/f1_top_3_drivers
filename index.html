@@ -14,6 +14,7 @@
         <form>
             <label for="drivers">Choose a driver:</label>
             <select name="drivers" id="drivers">
+                <option value="no-choice">---</option>
                 <option value="max">Max Verstappen</option>
                 <option value="lando">Lando Norris</option>
                 <option value="lec">Charles Leclerc</option>
@@ -78,17 +79,15 @@
                             displayInfo.style.borderLeft='10px solid #EF1A2D';
                             displayInfo.style.paddingLeft='10px';
                         }
-                        else{
-                            displayInfo.style.borderLeft='none';
-                            displayInfo.style.paddingLeft='0px';
-                        }
                         const driverImage=document.createElement('img');
                         driverImage.src=info.image;
                         displayInfo.appendChild(driverImage);
                         driverImage.style.width="200px";
                     }
-                    else{
+                    else if(info.name.toLowerCase()=="---"){
                         displayInfo.innerHTML='driver not found';
+                        displayInfo.style.borderLeft='none';
+                        displayInfo.style.paddingLeft='0px';
                     }
                 });
             });
